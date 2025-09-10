@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Switch Scheme</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 5px;
+      justify-items: center;
+      background-color: antiquewhite;
+    }
+
+    .container{
+      background-color: transparent;
+      border: 1px solid black;
+      height: 200px;
+      width: 450px;
+      justify-content: space-between;
+    }
+
+    .container .button{
+      background-color: transparent;
+      border: 1px solid black;
+      height: 55px;
+      width: 65px;
+      padding: 30px;
+      position: relative;
+      top: 60px;
+      left: 100px;
+      cursor: pointer;
+    }
+
+    #grey{
+      background-color: grey;
+      margin-right: 5px;
+    }
+
+    #green{
+      background-color: green;
+      margin-right: 5px;
+    }
+
+    #black{
+      background-color: black;
+      margin-right: 5px;
+    }
+
+    #white{
+      background-color: white;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Color Switcher</h1>
+
+  <div class="container">
+    <span id="grey" class="button"></span>
+    <span id="green" class="button"></span>
+    <span id="black" class="button"></span>
+    <span id="white" class="button"></span>
+  </div>
+  
+
+  <script>
+    const buttons = document.querySelectorAll(".button")
+
+    const body = document.querySelector("body")
+
+    console.log(buttons)
+
+    buttons.forEach(function(button){
+ 
+      button.addEventListener('click',function (e){
+      if(e.target.id === 'grey'){
+        body.style.backgroundColor = e.target.id;
+      }
+
+       if(e.target.id === 'green'){
+        body.style.backgroundColor = e.target.id;
+      }
+
+       if(e.target.id === 'black'){
+        body.style.backgroundColor = e.target.id;
+      }
+
+       if(e.target.id === 'white'){
+        body.style.backgroundColor = e.target.id;
+      }
+     
+      })
+    })
+  </script>
+</body>
+</html>
